@@ -1,0 +1,504 @@
+/*
+ * Theme Name: Claufolio
+ * Description: SAE Portfolio MPR3400
+ * Author: Claudio Weckherlin
+*/
+
+@import url("https://use.typekit.net/fjy8thf.css");
+
+$primary: white;
+$secondary: black;
+$accent: #4ef992;
+
+* {
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  color: $secondary;
+  background: $primary;
+}
+
+::selection {
+  color: $secondary;
+  background: $primary;
+}
+
+body {
+  font-family: aktiv-grotesk-extended, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+
+  background-color: $secondary;
+  color: $primary;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+a {
+  color: $primary;
+}
+
+h2 {
+  font-size: 5rem;
+  font-weight: 900;
+  color: $primary;
+}
+
+button {
+  background-color: transparent;
+  font-size: 3rem;
+  border: 1px solid $accent;
+  font-family: Ogg, serif;
+  color: $accent;
+  border-radius: 60px;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  text-transform: uppercase;
+
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    color: $secondary;
+    background-color: $accent;
+  }
+}
+
+html.has-scroll-smooth {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.scroll-container {
+  perspective: 1px;
+}
+
+.cursor {
+  div {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: $primary;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    z-index: 1000;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+
+    span {
+      display: none;
+      color: $accent;
+      font-weight: 900;
+      font-size: 3rem;
+      position: absolute;
+      width: 100%;
+      top: 4vh;
+      left: 3vw;
+    }
+  }
+}
+
+.spacer {
+  height: 20vh;
+  width: 100vw;
+}
+
+.heading {
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: 900;
+  color: $accent;
+
+  &__stroke {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 5rem;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $accent;
+  }
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ############################ */
+/* Menu / Fullscreen */
+/* ############################ */
+header {
+  .hamburger {
+    margin: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 35px;
+    height: 35px;
+
+    span {
+      position: absolute;
+      height: 3px;
+      width: 35px;
+      background: $primary;
+      display: block;
+      transition: 0.5s;
+      transform-origin: center;
+
+      &:nth-child(2) {
+        top: 10px;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      > span {
+        background-color: $accent;
+      }
+    }
+
+    &.checked {
+      span {
+        &:nth-child(2) {
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(1) {
+          transform: translateY(10px) rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+.fullscreen-menu {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: $secondary;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+
+  &__item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    a {
+      font-family: Ogg, serif;
+      padding-left: 10vw;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 6rem;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: $primary;
+
+      &:hover {
+        color: $primary;
+        -webkit-text-fill-color: $primary;
+        -webkit-text-stroke-width: 0;
+      }
+    }
+  }
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+/* ############################ */
+/* Intro */
+/* ############################ */
+.intro {
+  padding: 2rem;
+  &__content {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 30% 60% 10%;
+    grid-template-areas:
+      ". middle ."
+      "left middle ."
+      ". middle right";
+
+    &__left {
+      grid-area: left;
+
+      font-family: Ogg, serif;
+      font-size: 1.7rem;
+
+      display: flex;
+      flex-direction: column;
+
+      :nth-child(2) {
+        height: 10vh;
+        border-left: 1px solid $primary;
+      }
+    }
+    &__middle {
+      grid-area: middle;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          position: absolute;
+          user-drag: none;
+          -webkit-user-drag: none;
+          user-select: none;
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+        }
+
+        /* Wirrwarr */
+        .zero {
+          width: 45%;
+        }
+
+        /* Text */
+        .one {
+          width: 40%;
+          mix-blend-mode: difference;
+        }
+
+        /* Green  */
+        .two {
+          width: 38%;
+        }
+
+        /* Circle */
+        .three {
+          width: 17%;
+        }
+      }
+    }
+    &__right {
+      grid-area: right;
+
+      div {
+        border-left: 1px solid $primary;
+        padding: 5px;
+        height: 20vh;
+      }
+    }
+  }
+}
+
+/* ############################ */
+/* Project Overview */
+/* ############################ */
+.project-overview {
+  display: grid;
+  grid-template-columns: 10vw 60vw 40vw;
+  grid-template-rows: auto;
+
+  grid-template-areas: ". list arrow";
+
+  &__list {
+    grid-area: list;
+    &__item {
+      border-top: 1px solid $primary;
+      a {
+        color: $primary;
+        text-decoration: none;
+        font-family: Ogg, serif;
+        font-size: 4rem;
+        text-transform: uppercase;
+      }
+
+      &:last-child {
+        border-bottom: 1px solid $primary;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        > a {
+          color: $accent;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      img {
+        visibility: hidden;
+        position: absolute;
+        width: 400px;
+        height: 500px;
+        object-fit: cover;
+        z-index: 300;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        transform: scale(0);
+      }
+    }
+  }
+
+  .img-visible {
+    visibility: visible;
+    transform: scale(1);
+    transition: all 0.4s ease-in-out;
+  }
+
+  &__arrow {
+    grid-area: arrow;
+    &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+/* ############################ */
+/* Project Showcase / horizontal Scroll */
+/* ############################ */
+.horizontal-scroll {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  padding: 50px 10vw;
+  margin: auto;
+  place-items: center;
+}
+
+#sectionPin {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  left: 0;
+}
+
+.pin-wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px 10vw;
+
+  & > * {
+    min-width: 60vw;
+    padding: 0 5vw;
+  }
+
+  div {
+    img {
+      height: 60vh;
+      width: 70vw;
+      object-fit: cover;
+    }
+    h2 {
+      position: absolute;
+      top: 6vh;
+    }
+  }
+}
+
+/* ############################ */
+/* Banner */
+/* ############################ */
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  &__elem {
+    height: 18vh;
+    background-color: $accent;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      white-space: nowrap;
+      text-transform: uppercase;
+      font-weight: 900;
+      width: 100vw;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: $secondary;
+    }
+  }
+}
+
+/* ############################ */
+/* Contact */
+/* ############################ */
+.contact {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__text {
+      width: 60vw;
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: flex-end;
+      width: 80%;
+    }
+  }
+}
+
+/* ############################ */
+/* Footer */
+/* ############################ */
+.footer {
+  background-color: $accent;
+  height: 17vh;
+
+  &__content {
+    padding: 20px;
+    display: grid;
+    width: 100%;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    grid-template-areas: "left middle right";
+
+    span {
+      color: $secondary;
+    }
+
+    a {
+      color: $secondary;
+    }
+
+    &__left {
+      grid-area: left;
+    }
+    &__middle {
+      grid-area: middle;
+    }
+    &__right {
+      grid-area: right;
+    }
+  }
+}

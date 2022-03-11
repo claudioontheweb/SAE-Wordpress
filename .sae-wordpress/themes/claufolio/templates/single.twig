@@ -1,0 +1,23 @@
+{% extends "layouts/base.twig" %}
+{% block content %}
+
+	<div class="post-wrapper">
+
+		<a class="post-wrapper__back" href="/">
+			<img src="{{site.theme.link}}/assets/arrow_back.svg">
+		</a>
+
+		<div class="post-content">
+
+			<h1 class="post-content__title">{{ post.title }}</h1>
+
+
+			<div>{{ post.content }}</div>
+			<hr>
+
+
+		</div>
+		{% include "includes/comments.twig" %}
+
+	</div>
+{% endblock %}
