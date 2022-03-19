@@ -11,9 +11,13 @@
 
 			<h1 class="post-content__title">{{ post.title }}</h1>
 
+			{% for category in post.categories %}
+				<a href="{{ category.link }}">{{ category.name }}</a>
+			{% endfor %}
 
-			<div>{{ post.content }}</div>
 			<hr>
+
+			<div class="post-content__content">{{ post.content }}</div>
 
 
 		</div>

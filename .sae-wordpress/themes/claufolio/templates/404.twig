@@ -1,4 +1,19 @@
 {% extends "layouts/base.twig" %}
 {% block content %}
-  <h1>404 - Seite nicht gefunden</h1>
+
+
+	<div class="notfound-wrapper">
+
+		<a class="notfound-wrapper__back" href="/">
+			<img src="{{site.theme.link}}/assets/arrow_back.svg">
+		</a>
+
+		<div class="notfound-content">
+
+			<img class="not-selectable" src="{{site.theme.link}}/assets/404.svg" alt="404 Not Found"/>
+
+		</div>
+
+	</div>
+
 {% endblock %}

@@ -1,7 +1,4 @@
-.post-wrapper {
-  h2 {
-    font-size: 2rem;
-  }
+.notfound-wrapper {
   padding: 2rem;
 
   &__back {
@@ -24,14 +21,8 @@
   }
 }
 
-.post-content {
-  &__title {
-    font-size: 5rem;
-    font-weight: 900;
-    text-transform: uppercase;
-  }
-
-  &__content {
-    min-height: 100vh;
-  }
+.notfound-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

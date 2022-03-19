@@ -11,34 +11,38 @@
 		<link rel="stylesheet" href="{{ site.theme.link }}/assets/css/post.css">
 		<link rel="stylesheet" href="{{ site.theme.link }}/assets/css/comments.css">
 		<link rel="stylesheet" href="{{ site.theme.link }}/assets/css/about.css">
+		<link rel="stylesheet" href="{{ site.theme.link }}/assets/css/404.css">
+		<link rel="stylesheet" href="{{ site.theme.link }}/assets/css/archive.css">
 		<link rel="stylesheet" href="{{ site.theme.link }}/style.css">
 
 		{{ function('wp_head') }}
 	</head>
 	<body>
 
-		<!-- Navigation / Fullscreen Menu -->
-		<header>
-			<div class="hamburger">
-				<span></span>
-				<span></span>
-			</div>
-		</header>
-		<div class="fullscreen-menu">
-			<div class="fullscreen-menu__item">
-				<a onclick="return scrollToPage('introPage')">Home</a>
-			</div>
-			<div class="fullscreen-menu__item">
-				<a href="/about">About</a>
-			</div>
-			<div class="fullscreen-menu__item">
-				<a onclick="return scrollToPage('workPage')">Work</a>
-			</div>
-			<div class="fullscreen-menu__item">
-				<a onclick="return scrollToPage('contactPage')">Contact</a>
+		<div
+			class="menuWrapper">
+			<!-- Navigation / Fullscreen Menu -->
+			<header>
+				<div class="hamburger">
+					<span></span>
+					<span></span>
+				</div>
+			</header>
+			<div class="fullscreen-menu">
+				<div class="fullscreen-menu__item">
+					<a onclick="return scrollToPage('introPage')">Home</a>
+				</div>
+				<div class="fullscreen-menu__item">
+					<a href="/about">About</a>
+				</div>
+				<div class="fullscreen-menu__item">
+					<a onclick="return scrollToPage('workPage')">Work</a>
+				</div>
+				<div class="fullscreen-menu__item">
+					<a onclick="return scrollToPage('contactPage')">Contact</a>
+				</div>
 			</div>
 		</div>
-
 		<!-- Main Wrapper / Used for Locomotive Scroll -->
 		<div
 			class="scroll-container">
@@ -78,6 +82,7 @@
 		<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+		<script src="https://unpkg.com/wilderness/dist/wilderness.production.js"></script>
 		<script src="{{ site.theme.link }}/js/main.js"></script>
 	</body>
 </html>

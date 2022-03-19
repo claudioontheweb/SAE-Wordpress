@@ -1,7 +1,4 @@
-.post-wrapper {
-  h2 {
-    font-size: 2rem;
-  }
+.archive-wrapper {
   padding: 2rem;
 
   &__back {
@@ -24,13 +21,7 @@
   }
 }
 
-.post-content {
-  &__title {
-    font-size: 5rem;
-    font-weight: 900;
-    text-transform: uppercase;
-  }
-
+.archive-content {
   &__content {
     min-height: 100vh;
   }

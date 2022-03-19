@@ -157,9 +157,16 @@ window.addEventListener("load", function () {
 
 // ######################################################################
 // Menu
+const menuWrapper = document.querySelector(".menuWrapper")
 const hamburger = document.querySelector(".hamburger")
 const fsMenu = document.querySelector(".fullscreen-menu")
 const menuItems = document.querySelectorAll(".fullscreen-menu__item")
+
+if (window.location.pathname != "/") {
+  menuWrapper.style.display = "none";
+} else {
+  menuWrapper.style.display = "block";
+}
 
 hamburger.addEventListener("click", function(event) {
 
