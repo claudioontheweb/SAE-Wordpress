@@ -1,27 +1,43 @@
 {% extends "layouts/base.twig" %}
 {% block content %}
 
+
 	<div class="post-wrapper">
 
-		<a class="post-wrapper__back" href="/">
-			<img src="{{site.theme.link}}/assets/arrow_back.svg">
-		</a>
+		<div>
+			<a class="post-wrapper__back" href="/">
+				<img src="{{site.theme.link}}/assets/arrow_back.svg">
+			</a>
+		</div>
 
 		<div class="post-content">
 
+
+			<div class="post-content__thumbnail">
+				<img src="{{post.thumbnail}}">
+			</div>
+
 			<h1 class="post-content__title">{{ post.title }}</h1>
 
+			{{ post.date }},
 			{% for category in post.categories %}
 				<a href="{{ category.link }}">{{ category.name }}</a>
 			{% endfor %}
 
+
 			<hr>
 
-			<div class="post-content__content">{{ post.content }}</div>
+			<div class="post-content__wrapper">
+				<div class="post-content__wrapper__content">
+					{{ post.content }}
+				</div>
+			</div>
 
 
 		</div>
-		{% include "includes/comments.twig" %}
+	</div>
 
+	<div class="comments">
+		{% include "includes/comments.twig" %}
 	</div>
 {% endblock %}

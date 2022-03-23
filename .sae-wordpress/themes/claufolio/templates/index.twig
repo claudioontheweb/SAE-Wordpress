@@ -14,11 +14,13 @@
 				<div class="intro__content__middle__container">
 					<img class="three not-selectable" data-scroll data-scroll-speed="-1" src="{{ site.theme.link }}/assets/logo_3.svg" alt="Logo Grafik"/>
 					<img class="two not-selectable" data-scroll data-scroll-direction="horizontal" data-scroll-speed="2" src="{{ site.theme.link }}/assets/logo_2.svg" alt="Logo Grafik"/>
-					<img
-					class="one not-selectable" data-scroll data-scroll-speed="1" src="{{ site.theme.link }}/assets/logo_1.svg" alt="Logo Grafik"/>
-					<!--<img class="zero not-selectable" data-scroll src="{{ site.theme.link }}/assets/logo_0.svg" alt="Logo Grafik"/>-->
-					<div class="wirrwarr1"></div>
-					<div class="wirrwarr2"></div>
+					<img class="one not-selectable" data-scroll data-scroll-speed="1" src="{{ site.theme.link }}/assets/logo_1.svg" alt="Logo Grafik"/>
+					<div class="shapeMorph1"></div>
+					<div class="shapeMorph2"></div>
+					<!--<img
+																													class="zero not-selectable" data-scroll src="{{ site.theme.link }}/assets/logo_0.svg" alt="Logo Grafik"/>-->
+					<!--<div class="wirrwarr1"></div>
+																																												<div class="wirrwarr2"></div>-->
 
 				</div>
 			</div>
@@ -38,7 +40,7 @@
 			<div class="project-overview__list">
 				{% for post in posts %}
 					<div class="project-overview__list__item">
-						<a href="{{ post.link }}">{{  post.title }}</a>
+						<a href="{{ post.link }}">{{  post.title|slice(0, 20) ~ '...' }}</a>
 						<img class="project-overview-img" src="{{ post.thumbnail.src }}" alt=""/>
 					</div>
 				{% endfor %}
@@ -61,7 +63,6 @@
 			{% for post in posts %}
 				<div>
 					<a href="{{post.link}}">
-						<h2 class="heading__stroke">{{post.title}}</h2>
 						<img class="imghover" src="{{post.thumbnail.src}}" alt="{{post.title}}"/>
 					</a>
 				</div>
@@ -97,7 +98,7 @@
 				<h2>Interested in working together?</h2>
 			</div>
 			<div class="contact__container__btn">
-				<button>Say Hi!</button>
+				<button onclick="document.location='mailto:claudio.weckherlin@gmail.com'">Say Hi!</button>
 			</div>
 		</div>
 	</section>

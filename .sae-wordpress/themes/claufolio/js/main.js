@@ -32,7 +32,10 @@ let cursorTxt = ball.querySelector("span");
 allImgs.forEach(img => {
   img.addEventListener("mouseenter", function(event) {
     
-   let imgTitle = img.alt;
+   let imgTitle = img.alt.slice(0,20);
+   if (img.alt.length > 21) {
+     imgTitle += "...";
+   }
    cursorTxt.innerText = imgTitle;
 
    cursorTxt.style.display = "block";
