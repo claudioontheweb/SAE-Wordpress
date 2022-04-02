@@ -603,3 +603,271 @@ header {
     }
   }
 }
+
+
+// #######################################################
+// Responsive Design
+// #######################################################
+@media screen and (max-width: 1200px) {
+
+  .intro {
+    padding: 2rem;
+    &__content {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 10% 80% 10%;
+      grid-template-rows: 30% 60% 10%;
+      grid-template-areas:
+        ". middle ."
+        ". middle ."
+        ". middle .";
+
+        &__right {
+          display: none;
+        }
+  
+      &__left {
+       display: none;
+      }
+      &__middle {
+        &__container {
+  
+          .shapeMorph1 {
+            height: 250px;
+
+            width: 250px;
+
+          }
+  
+          .shapeMorph2 {
+            height: 250px;
+
+            width: 300px;
+
+  
+
+          }
+      
+  
+          /* Text */
+          .one {
+            width: 80%;
+            mix-blend-mode: difference;
+          }
+  
+          /* Green  */
+          .two {
+            width: 76%;
+          }
+  
+          /* Circle */
+          .three {
+            width: 34%;
+          }
+        }
+      }
+
+    }
+  }
+
+  // **************************************************
+
+
+  .project-overview {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+  
+    &__arrow {
+     width: 100%;
+     padding-bottom: 4rem;
+
+      &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &__list {
+      &__item {
+
+        img {
+          display: none;
+        }
+  
+        a {
+          padding-left: 1rem;
+          text-decoration: none;
+          font-family: Ogg, serif;
+          font-size: 2.5rem;
+          text-transform: uppercase;
+        }
+      }
+    }
+  
+    .img-visible {
+      visibility: hidden;
+    }
+   
+  }  
+
+
+  // **************************************************
+
+  .horizontal-scroll, #sectionPin, .pin-wrap {
+    display: none;
+  }
+
+  // **************************************************
+
+  .banner {
+   display: none;
+  }
+
+  // **************************************************
+  .contact {
+    &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+  
+      &__text {
+        width: 60vw;
+        h2 {
+          font-size: 2rem;
+        }
+      }
+  
+      &__btn {
+      
+        padding-top: 2.5rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        button {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  
+  // *****************************
+
+
+  .footer {
+    height: 17vh;
+  
+    &__content {
+      padding: 20px;
+      display: grid;
+      width: 100%;
+  
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 30% 70%;
+      grid-template-areas: "left right" "middle .";
+  
+      span {
+        color: $secondary;
+        font-size: 0.8rem;
+      }
+  
+      a {
+        color: $secondary;
+        font-size: 0.8rem;
+      }
+  
+      &__left {
+        grid-area: left;
+      }
+      &__middle {
+        grid-area: middle;
+      }
+      &__right {
+        grid-area: right;
+      }
+    }
+  }
+
+  // ***********************
+
+
+  header {
+
+    .hamburger {
+      margin: 20px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1000;
+      width: 35px;
+      height: 35px;
+  
+      span {
+        position: absolute;
+        height: 3px;
+        width: 35px;
+        background: $primary;
+        display: block;
+        transition: 0.5s;
+        transform-origin: center;
+  
+        &:nth-child(2) {
+          top: 10px;
+          width: 20px;
+          left: 15px;
+        }
+      }
+  
+      &:hover {
+        cursor: pointer;
+        > span {
+          background-color: $accent;
+        }
+      }
+  
+      &.checked {
+        span {
+          &:nth-child(2) {
+            transform: rotate(45deg);
+            left: 0;
+            width: 35px;
+          }
+  
+          &:nth-child(1) {
+            transform: translateY(10px) rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+
+.fullscreen-menu {
+  &__item {
+  
+    a {
+
+      font-size: 3rem;
+    
+    }
+  }
+}
+  
+
+  // ************************
+  .spacer {
+    display: none;
+  }
+
+  .cursor {
+  display: none;
+  }
+
+ 
+
+}

@@ -91,3 +91,77 @@ $accent: #4ef992;
   }
   padding: 2rem;
 }
+
+
+// ###############################################################
+// Media Queries
+// ###############################################################
+
+@media screen and (max-width: 1200px){
+  .post-wrapper {
+    width: 100vw;
+    display: flex;
+  
+    h2 {
+      font-size: 2rem;
+    }
+    padding: 2rem;
+  
+    &__back {
+      width: 20vw;
+      position: absolute;
+      font-size: 1.5rem;
+      text-decoration: none;
+  
+      img {
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        left: 0;
+      }
+  
+      &:hover {
+        > img {
+          left: -10px;
+        }
+      }
+    }
+  
+    .post-content {
+      &__title {
+        font-size: 3rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+  
+      &__thumbnail {
+        padding-top: 10vh;
+        display: flex;
+        padding-bottom: 10vh;
+  
+        img {
+          height: 70vh;
+          object-fit: cover;
+        }
+      }
+  
+      &__wrapper {
+        min-height: 100vh;
+        display: flex;
+        justify-content: flex-end;
+  
+        &__content {
+          padding-top: 5vh;
+          width: 100%;
+  
+          h2 {
+            font-size: 1.5rem;
+            strong {
+              font-size: 1.5rem;
+            }
+            
+          }
+        }
+      }
+    }
+  }
+}
