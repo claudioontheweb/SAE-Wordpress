@@ -56,11 +56,13 @@ $accent: #4ef992;
       &__content {
         padding-top: 5vh;
         width: 80%;
+
         p {
           padding-bottom: 1rem;
         }
 
         img {
+          padding-top: 1rem;
           justify-content: center;
         }
 
@@ -84,6 +86,7 @@ $accent: #4ef992;
 
 .comments {
   h2 {
+
     font-size: 2rem;
   }
   padding: 2rem;

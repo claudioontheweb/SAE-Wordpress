@@ -50,7 +50,7 @@ h2 {
 button {
   background-color: transparent;
   font-size: 3rem;
-  border: 1px solid $accent;
+  border: 2px solid $accent;
   font-family: Ogg, serif;
   color: $accent;
   border-radius: 60px;
@@ -94,7 +94,8 @@ html.has-scroll-smooth {
       font-weight: 900;
       font-size: 3rem;
       position: absolute;
-      width: 100%;
+      width: 20vw;
+      height: 30vh;
       top: 4vh;
       left: 3vw;
     }
@@ -163,6 +164,8 @@ header {
 
       &:nth-child(2) {
         top: 10px;
+        width: 20px;
+        left: 15px;
       }
     }
 
@@ -177,6 +180,8 @@ header {
       span {
         &:nth-child(2) {
           transform: rotate(45deg);
+          left: 0;
+          width: 35px;
         }
 
         &:nth-child(1) {
@@ -223,6 +228,7 @@ header {
         color: $primary;
         -webkit-text-fill-color: $primary;
         -webkit-text-stroke-width: 0;
+        cursor: pointer;
       }
     }
   }
