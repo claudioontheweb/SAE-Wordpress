@@ -1,7 +1,0 @@
-/*
- * Block: Site Title
- */
-
-.wp-block-site-title a:not(:hover) {
-	text-decoration: none;
-}

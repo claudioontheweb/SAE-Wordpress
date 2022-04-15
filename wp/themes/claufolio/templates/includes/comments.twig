@@ -1,0 +1,28 @@
+<section class="comment-wrapper">
+	<hr>
+
+	<div class="comment-wrapper__header">
+		<h2>Comments ({{ post.comment_count }})</h2>
+	</div>
+	<div class="comment-wrapper__comments">
+		<div class="comment-wrapper__form">
+			<form method="post" action="{{ site.site_url~'/wp-comments-post.php' }}">
+				<input placeholder="Name" required name="author" type="text">
+				<input placeholder="Mail" required name="email" type="email" id="email">
+				<textarea placeholder="Write a comment... (max 150. characters)" name="comment" maxlength="150"></textarea>
+				<input name="comment_post_ID" value="{{ post.id }}" type="hidden">
+				<button type="submit" name="Submit">Submit</button>
+			</form>
+		</div>
+
+		<div class="comment-container">
+			{% for comment in post.comments %}
+				<div class="comment">
+					<span class="comment__name">{{ comment.author.name }}</span>
+					<span class="comment__date">{{ comment.date }}</span>
+					<div class="comment__content">{{ comment.comment_content }}</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

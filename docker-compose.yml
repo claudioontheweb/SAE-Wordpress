@@ -9,10 +9,12 @@ services:
       - "3356:3306"
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
+    volumes:
+      - ./db:/var/lib/mysql
     
   wordpress:
     depends_on:
@@ -29,9 +31,9 @@ services:
       WORDPRESS_DB_PASSWORD: wordpress
       WORDPRESS_DB_NAME: wordpress
     volumes:
-      - .sae-wordpress/plugins:/var/www/html/wp-content/plugins
-      - .sae-wordpress/themes:/var/www/html/wp-content/themes
-      - .sae-wordpress/uploads:/var/www/html/wp-content/uploads
+      - ./wp/plugins:/var/www/html/wp-content/plugins
+      - ./wp/themes:/var/www/html/wp-content/themes
+      - ./wp/uploads:/var/www/html/wp-content/uploads
 volumes:
   db_data: {}
   wordpress_data: {}
