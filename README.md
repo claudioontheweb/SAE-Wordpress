@@ -1,5 +1,7 @@
 # MPR4300 Portfolio Weblog - Claudio Weckherlin
 
+Test Server: https://tbd.com
+
 ## Introduction
 
 This document describes how to set up my wordpress blog which was created for MPR4300 at SAE.
