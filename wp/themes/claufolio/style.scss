@@ -6,6 +6,11 @@
 
 @import url("https://use.typekit.net/fjy8thf.css");
 
+@font-face {
+  font-family: 'Ogg';
+  src: font_url('./assets/fonts/Ogg-Roman.otf') format('opentype'),
+}
+
 $primary: white;
 $secondary: black;
 $accent: #4ef992;
