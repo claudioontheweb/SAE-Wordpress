@@ -13,4 +13,4 @@ This document describes how to set up my wordpress blog which was created for MP
 ## Access Wordpress Dashboard
 
 1. Navigate to: `http://localhost:8000/wp-login.php`
-2. Username and password can be found in the project folder under "01_Dokumentation/MPR4300_Dokumentation_Claudio_Weckherlin.docx -> Chapter 5. Finaler Weblog"
+2. Username and password can be found in the project folder under "01_Dokumentation/MPR4300_Dokumentation_Claudio_Weckherlin.pdf -> Chapter 5. Finaler Weblog"
