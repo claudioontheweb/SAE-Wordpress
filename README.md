@@ -1,6 +1,7 @@
 # MPR4300 Portfolio Weblog - Claudio Weckherlin
 
-Test Server: https://tbd.com
+Test Live-Server: http://claudiow.mywdd.info/
+
 
 ## Introduction
 
